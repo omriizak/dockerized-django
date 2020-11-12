@@ -15,5 +15,6 @@ COPY requirements.txt /www/
 RUN pip install -r requirements.txt
 
 ENV PYTHONUNBUFFERED 1
+ENV SECRET_KEY 12341234123412341234123412341234
 
 COPY . /www/
