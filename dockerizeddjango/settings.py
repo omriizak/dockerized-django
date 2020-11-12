@@ -54,14 +54,26 @@ WSGI_APPLICATION = 'dockerizeddjango.wsgi.application'
 
 
 # Database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'HOST': os.getenv('POSTGRES_HOST'),
+#         'PORT': os.getenv('POSTGRES_PORT'),
+#         'USER': os.getenv('POSTGRES_USER'),
+#         'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+#         'NAME': os.getenv('POSTGRES_DB'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': os.getenv('POSTGRES_HOST'),
-        'PORT': os.getenv('POSTGRES_PORT'),
-        'USER': os.getenv('POSTGRES_USER'),
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
-        'NAME': os.getenv('POSTGRES_DB'),
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'CEMDATA',
+        'USER': 'NMG_DATA_DICT',
+        'PASSWORD': 'W00rdebo3k',
+        'DEFAULT_TABLESPACE': 'VODACOM',
+        'HOST': 'dcemdb1zatcrh.vodacom.corp',
+        'PORT': '1521',
     }
 }
 
