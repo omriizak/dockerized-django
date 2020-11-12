@@ -5,11 +5,11 @@ from dotenv import load_dotenv
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = "1rmr1rl@8ti(7*&*-^lr&o*z_n4)@$w&1i^uqz-d#u2xouvak)"# os.getenv('SECRET_KEY')
 
-DEBUG = bool(int(os.getenv('DEBUG', False)))
+DEBUG = True # bool(int(os.getenv('DEBUG', False)))
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',') if os.getenv('ALLOWED_HOSTS') else []
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',') if os.getenv('ALLOWED_HOSTS') else ['*']
 
 
 # Application definition
